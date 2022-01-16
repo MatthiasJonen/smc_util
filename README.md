@@ -1,22 +1,20 @@
 # smc_util
 Apple System Management Control (SMC) utility
 
-Forked from original smc_util repository, with a couple of other, slightly modified, SMC-related tools:
+Forked from floe/smc_util who forked from original smc_util repository, with a couple of other, slightly modified, SMC-related tools:
 * powermetrics.d from https://gist.github.com/beltex/acbbeef815a7be938abf
 * SmcDumpKey.c from https://www.contrib.andrew.cmu.edu/~somlo/OSXKVM/
 
 # How to use
 
-Chances are you're here because of my [blog post](https://floe.butterbrot.org/matrix/hacking/tdm/) or [SO question](https://stackoverflow.com/questions/43491594/reverse-engineering-the-target-display-mode-on-an-imac/), and want to use this to turn an old iMac running Linux into a display.
+_Note_: This was tested on a mid-2010 27" iMac no apple OS, only Elementary OS. Base is ubuntu 20.04. Any other model/OS combo might behave differently.
 
-_Note_: This was tested on a mid-2010 27" iMac running Yosemite and Ubuntu 16.04. Any other model/OS combo might behave differently.
-
-_Note_: I don't have the iMac I used for this anymore, so I can't test anything, sorry. That being said, the steps to use this are (on Ubuntu and derivatives):
+This works for any user on the system with sudo rights without password.
 
 ```
 sudo apt-get install build-essential
 
-git clone https://github.com/floe/smc_util.git
+git clone https://github.com/MatthiasJonen/smc_util.git
 cd smc_util
 
 gcc -O2 -o SmcDumpKey SmcDumpKey.c -Wall
