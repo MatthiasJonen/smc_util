@@ -4,17 +4,20 @@ Apple System Management Control (SMC) utility
 Forked from floe/smc_util who forked from original smc_util repository, with a couple of other, slightly modified, SMC-related tools:
 * powermetrics.d from https://gist.github.com/beltex/acbbeef815a7be938abf
 * SmcDumpKey.c from https://www.contrib.andrew.cmu.edu/~somlo/OSXKVM/
+* tdm_toggle.sh from https://github.com/floe/smc_util/pull/11 by https://github.com/FreekMank
 
 # How to use
 
 _Note_: This was tested on a mid-2010 27" iMac no apple OS, only Elementary OS. Base is ubuntu 20.04. Any other model/OS combo might behave differently.
 
 This works for any user on the system with sudo rights without password.
+It needs to be installed in the /opt directory as I refer it hardcoded.
 
 ```
 sudo apt-get install build-essential
 
-git clone https://github.com/MatthiasJonen/smc_util.git
+cd /opt
+sudo git clone https://github.com/MatthiasJonen/smc_util.git
 cd smc_util
 
 gcc -O2 -o SmcDumpKey SmcDumpKey.c -Wall
