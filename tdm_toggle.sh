@@ -2,7 +2,7 @@
 
 pushd /opt/smc_util/
 
-if [[ -f "~/.tdm_started" ]]; then
+if [[ -f ~/.tdm_started ]]; then
   echo "Switching off TDM"
   source tdm_off.sh
 else
